@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="light">
+<html lang="pt-br" class="">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -8,36 +8,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felipe Oliveira - Contatos</title>
-    <link rel="stylesheet" href="./app.css">
+    <link rel="stylesheet" href="./assets/css/normalize.min.css">
+
+    <!-- created at 07/04/2023 19h30m -->
+    <link rel="stylesheet" href="./assets/css/newversion.css">
 </head>
 <body>
-    <div id="container">
-        <div id="profile">
-            <img src="https://github.com/felipeoli7eira.png" alt="Foto de perfil do usuário Felipe Oliveira no github">
-            <p>@felipeoli7eira</p>
-        </div>
+    <div id="app">
+        <nav id="profile">
+            <img src="https://github.com/felipeoli7eira.png" loading="lazy" alt="Foto de perfil do usuário Felipe Oliveira no github">
+            <a target="_blank" href="https://instagram.com/oli7eirafelipe" class="username">@felipeoli7eira</a>
+        </nav>
 
-        <div class="switch" onclick="toggleTheme()">
+        <div id="switch-button" onclick="toggleTheme()">
             <button></button>
             <span></span>
         </div>
 
-        <ul>
-            <li>
-                <a href="https://music.youtube.com/playlist?list=PLk3IRRKkphwOEKX9lsMl7_PwnnTjLcy01" target="_blank">Minha Playlist pública</a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1r8tjl8xkood8FQYgtJZG0B9JCW0MP_Ry/view" target="_blank">Tenha uma LP como essa</a>
-            </li>
-            <li>
-                <a href="https://wa.me/5596984157994" target="_blank">Me chame no whatsapp</a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/drive/folders/17PxqFQyEQylOSMNZ58ID2q6FrRbtx5gn" target="_blank">Meu curriculo</a>
-            </li>
-        </ul>
+        <nav id="app-links">
+            <ul>
+                <li>
+                    <a href="https://music.youtube.com/playlist?list=PLk3IRRKkphwOEKX9lsMl7_PwnnTjLcy01" target="_blank">Minha playlist pública</a>
+                </li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1r8tjl8xkood8FQYgtJZG0B9JCW0MP_Ry/view" target="_blank">Tenha uma landing page como essa</a>
+                </li>
+                <li>
+                    <a href="https://wa.me/5596984157994" target="_blank">Me chame no whatsapp</a>
+                </li>
+                <li>
+                    <a href="https://drive.google.com/drive/folders/17PxqFQyEQylOSMNZ58ID2q6FrRbtx5gn" target="_blank">Meu currículo</a>
+                </li>
+            </ul>
+        </nav>
+        
 
-        <div id="social-links">
+        <nav id="social-links">
             <a href="https://www.linkedin.com/in/felipeoli7eira" target="_blank">
                 <ion-icon name="logo-linkedin"></ion-icon>
             </a>
@@ -50,11 +56,11 @@
             <a href="https://t.me/oli7eirafelipe" target="_blank">
                 <ion-icon name="call-outline"></ion-icon>
             </a>
-        </div>
+        </nav>
 
-        <footer>
+        <footer id="footer">
             <nav>
-                <span>Feito rapidinho por</span> <a href="">Felipe Oliveira</a>
+                <span>Feito na mão por</span> <a target="_blank" href="https://github.com/felipeoli7eira">Felipe Oliveira</a>
             </nav>
         </footer>
     </div>
@@ -64,6 +70,11 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <!-- app -->
-    <script src="./app.js"></script>
+    <script>
+        function toggleTheme()
+        {
+            document.documentElement.classList.toggle('dark-theme');
+        }
+    </script>
 </body>
 </html>
